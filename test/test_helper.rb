@@ -1,6 +1,6 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
-#require "rails/test_help"
+# require "rails/test_help"
 
 # Use Minitest directly (no rails/test_help, which can pull in AR paths)
 require "minitest/autorun"
@@ -14,14 +14,14 @@ require "active_support/testing/parallelization"
 module ActiveSupport
   class TestCase
     # Run tests in parallel with specified workers
-    #parallelize(workers: :number_of_processors)
-    #parallelize(workers: :number_of_processors, with: :threads)
+    # parallelize(workers: :number_of_processors)
+    # parallelize(workers: :number_of_processors, with: :threads)
     parallelize(workers: 1)  # effectively disabled
 
 
 
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-    #fixtures :all
+    # fixtures :all
 
     # ✅ Do not try to wrap tests in DB transactions
     if respond_to?(:use_transactional_tests=)

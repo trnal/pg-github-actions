@@ -1,6 +1,18 @@
+# config/application.rb
+
 require_relative "boot"
 
-require "rails/all"
+require "rails"
+# Pick the frameworks you want:
+require "action_controller/railtie"
+require "action_view/railtie"
+require "action_mailer/railtie"      # optional, remove if not using email
+require "active_job/railtie"         # optional, remove if not using background jobs
+require "action_cable/engine"        # optional, websockets
+# require "sprockets/railtie"        # only if using asset pipeline (ERB/CSS/JS)
+# DO NOT require "active_record/railtie"
+# DO NOT require "active_storage/engine" if not using file uploads
+# DO NOT require "action_mailbox/engine" or "action_text/engine" unless needed
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
